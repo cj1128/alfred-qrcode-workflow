@@ -1,3 +1,4 @@
 .DS_store
-workflow/*
-!workflow/info.plist
+workflow/qr
+workflow/meta.json
+workflow/qrcodes

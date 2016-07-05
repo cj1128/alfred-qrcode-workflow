@@ -2,7 +2,7 @@
 * @Author: CJ Ting
 * @Date:   2016-07-05 11:13:55
 * @Last Modified by:   CJ Ting
-* @Last Modified time: 2016-07-05 16:22:01
+* @Last Modified time: 2016-07-05 16:52:06
  */
 
 package main
@@ -27,8 +27,7 @@ const codesDir = "qrcodes"
 var item = alfred.Item{
 	Type: "file",
 	Icon: alfred.Icon{
-		Type: "filetype",
-		Path: "public.png",
+		Path: "icon.png",
 	},
 }
 
