@@ -25,7 +25,7 @@
 	<key>createdby</key>
 	<string>CJ Ting&lt;fatelovely1128@gmail.com&gt;</string>
 	<key>description</key>
-	<string>Get QR code from input</string>
+	<string>Generate QR Code on the fly</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -135,7 +135,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Generate QR Code on the fly</string>
 	<key>uidata</key>
 	<dict>
 		<key>48C61BCD-C23C-4612-A3E7-AD4CACF263B3</key>
@@ -160,6 +160,8 @@
 			<integer>200</integer>
 		</dict>
 	</dict>
+	<key>version</key>
+	<string>1.0</string>
 	<key>webaddress</key>
 	<string>cjitng.me</string>
 </dict>
