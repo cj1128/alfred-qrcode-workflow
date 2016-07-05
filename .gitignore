@@ -1,1 +1,3 @@
 .DS_store
+workflow/*
+!workflow/info.plist
