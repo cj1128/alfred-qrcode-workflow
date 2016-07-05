@@ -3,11 +3,11 @@
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://mit-license.org/2016)
 
 
-alfred workflow to manipulate QR Codes on the fly, uses [json response](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/), currenty only supports [alred v3](https://www.alfredapp.com/). if you are an alfred v2 user, please update, it's definitely worth it.
+alfred workflow to create QR Codes on the fly, currently only supports [alred v3](https://www.alfredapp.com/) cause it uses [json response](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/). if you are an alfred v2 user, please update, it's definitely worth it.
 
 ## Installation
 
-Download [QR-Code.alfredworkflow](https://github.com/fate-lovely/alfred-qrcode-workflow/raw/master/qrcode.alfredworkflow) and import to alfred v3(require Powerpack)
+Download [QR-Code.alfredworkflow](https://github.com/fate-lovely/alfred-qrcode-workflow/raw/master/QR-Code.alfredworkflow) and import to alfred v3 (require Powerpack).
 
 ## Usage
 
@@ -29,6 +29,8 @@ if `text` starts with `@`, it will be considered as an url and prepends with `ht
 `qrclearall`, clear all generated qr codes
 
 ## License
+
+Released under the [MIT license](http://mit-license.org/2016).
 
 
 
