@@ -2,7 +2,7 @@
 * @Author: CJ Ting
 * @Date:   2016-07-05 11:13:55
 * @Last Modified by:   CJ Ting
-* @Last Modified time: 2016-07-05 15:55:57
+* @Last Modified time: 2016-07-05 16:12:27
  */
 
 package main
@@ -112,6 +112,11 @@ func generateQRCode(content string) {
 }
 
 func readMeta() {
+	if !checkExists(meatFilename) {
+		meta = make(map[string]string)
+		return
+	}
+
 	bytes, err := ioutil.ReadFile(meatFilename)
 	if err == nil {
 		json.Unmarshal(bytes, &meta)
@@ -135,8 +140,15 @@ func saveMeta() {
 	}
 }
 
-func createDirIfNotExists(path string) error {
+func checkExists(path string) bool {
 	if _, err := os.Stat(path); os.IsNotExist(err) {
+		return false
+	}
+	return true
+}
+
+func createDirIfNotExists(path string) error {
+	if !checkExists(path) {
 		err := os.Mkdir(path, 0744)
 		if err != nil {
 			return err

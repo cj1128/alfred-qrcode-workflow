@@ -1,0 +1,23 @@
+{
+	"ImportPath": "github.com/fate-lovely/alfred-qr-workflow",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v62",
+	"Deps": [
+		{
+			"ImportPath": "github.com/fate-lovely/go-alfred",
+			"Rev": "fbba78afa095cec19fbabebb7e8717b18fe29a5a"
+		},
+		{
+			"ImportPath": "github.com/skip2/go-qrcode",
+			"Rev": "5bfceac8c4950ff8f735525ddcde5a6b08d77ab6"
+		},
+		{
+			"ImportPath": "github.com/skip2/go-qrcode/bitset",
+			"Rev": "5bfceac8c4950ff8f735525ddcde5a6b08d77ab6"
+		},
+		{
+			"ImportPath": "github.com/skip2/go-qrcode/reedsolomon",
+			"Rev": "5bfceac8c4950ff8f735525ddcde5a6b08d77ab6"
+		}
+	]
+}
