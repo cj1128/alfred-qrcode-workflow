@@ -44,7 +44,7 @@
 				<key>keyword</key>
 				<string>qr</string>
 				<key>queuedelaycustom</key>
-				<integer>5</integer>
+				<integer>8</integer>
 				<key>queuedelayimmediatelyinitially</key>
 				<true/>
 				<key>queuedelaymode</key>

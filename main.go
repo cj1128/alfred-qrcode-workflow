@@ -2,7 +2,7 @@
 * @Author: CJ Ting
 * @Date:   2016-07-05 11:13:55
 * @Last Modified by:   CJ Ting
-* @Last Modified time: 2016-07-05 16:12:27
+* @Last Modified time: 2016-07-05 16:22:01
  */
 
 package main
@@ -88,6 +88,12 @@ func clearAllQRCodes() {
 }
 
 func generateQRCode(content string) {
+
+	// if begins with @, it's a url, add http://
+	if string(content[0]) == "@" {
+		content = fmt.Sprintf("http://%s", content[1:])
+	}
+
 	timestamp := time.Now().Unix()
 	path := fmt.Sprintf("./%s/qrcode_%d.png", codesDir, timestamp)
 	absPath, _ := filepath.Abs(path)
