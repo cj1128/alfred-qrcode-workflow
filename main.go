@@ -2,7 +2,7 @@
 * @Author: CJ Ting
 * @Date:   2016-07-05 11:13:55
 * @Last Modified by:   CJ Ting
-* @Last Modified time: 2016-07-05 16:52:06
+* @Last Modified time: 2016-07-05 18:21:32
  */
 
 package main
@@ -37,17 +37,14 @@ func init() {
 }
 
 func main() {
-	if len(os.Args) == 1 {
-		return
-	}
-
 	action := os.Args[1]
+
 	switch action {
 	case "add":
-		if len(os.Args) == 3 {
-			generateQRCode(os.Args[2])
-		} else {
+		if os.Args[2] == "" {
 			listAllQRCodes()
+		} else {
+			generateQRCode(os.Args[2])
 		}
 	case "clear":
 		clearAllQRCodes()
