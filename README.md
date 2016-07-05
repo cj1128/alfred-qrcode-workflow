@@ -11,6 +11,8 @@ Download [QR-Code.alfredworkflow](https://github.com/fate-lovely/alfred-qrcode-w
 
 ## Usage
 
+![](http://ww2.sinaimg.cn/large/9b85365djw1f5j80ccv8ug214c0l7kjm.gif)
+
 ### Generate QR Code
 
 `qr [text]`, generate qr code using text, this has a 800ms delay in case of generating many intermediate texts,
@@ -26,7 +28,7 @@ if `text` starts with `@`, it will be considered as an url and prepends with `ht
 
 ### Clear all generated QR Codes
 
-`qrclearall`, clear all generated qr codes
+`qrclear`, clear all generated qr codes
 
 ## License
 
