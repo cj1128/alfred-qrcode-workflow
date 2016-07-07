@@ -5,7 +5,7 @@
 	"Deps": [
 		{
 			"ImportPath": "github.com/fate-lovely/go-alfred",
-			"Rev": "fbba78afa095cec19fbabebb7e8717b18fe29a5a"
+			"Rev": "005043f1e6c941adb5cc082bddf2575df0e8832b"
 		},
 		{
 			"ImportPath": "github.com/skip2/go-qrcode",
