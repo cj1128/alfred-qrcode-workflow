@@ -2,7 +2,7 @@
 * @Author: CJ Ting
 * @Date:   2016-07-05 11:13:55
 * @Last Modified by:   CJ Ting
-* @Last Modified time: 2016-07-07 19:12:26
+* @Last Modified time: 2016-07-18 17:50:17
  */
 
 package main
@@ -84,7 +84,7 @@ func listAllQRCodes() {
 		alfred.AddItem(item)
 	}
 
-	response, err := alfred.JSON()
+	response, err := alfred.XML()
 	if err == nil {
 		fmt.Print(response)
 	} else {
