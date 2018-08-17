@@ -1,13 +1,9 @@
-.PHONY: build bundle
-
-.default: build
-
 build:
-	godep go build -o workflow/qr
+	go build -o workflow/qr
+.PHONY: build
 
-bundle:
-	godep go build -ldflags="-s -w" -o workflow/qr
+bundle: build
 	upx --brute workflow/qr
 	cd workflow && rm -rf meta.json && rm -rf qrcodes
 	cd workflow && zip -r ../QR-Code.alfredworkflow .
-
+.PHONY: bundle
