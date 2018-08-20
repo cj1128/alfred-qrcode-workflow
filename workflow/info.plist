@@ -8,11 +8,37 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>49189072-F463-4156-9A82-084476059619</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B21AB729-5B03-4BEC-B5F4-667BCF23B6FA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>48C61BCD-C23C-4612-A3E7-AD4CACF263B3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B21AB729-5B03-4BEC-B5F4-667BCF23B6FA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>281EF737-A9A4-4FF6-991A-03E14984BF54</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -32,6 +58,21 @@
 	<string>QR Code</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>48C61BCD-C23C-4612-A3E7-AD4CACF263B3</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -82,36 +123,123 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string></string>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array>
+					<string>+public.image</string>
+				</array>
+				<key>name</key>
+				<string>Scan QR Code</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
+			<string>alfred.workflow.trigger.action</string>
 			<key>uid</key>
-			<string>48C61BCD-C23C-4612-A3E7-AD4CACF263B3</string>
+			<string>49189072-F463-4156-9A82-084476059619</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./qr scan '{query}'</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B21AB729-5B03-4BEC-B5F4-667BCF23B6FA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>281EF737-A9A4-4FF6-991A-03E14984BF54</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string>Generate QR Code on the fly</string>
 	<key>uidata</key>
 	<dict>
+		<key>281EF737-A9A4-4FF6-991A-03E14984BF54</key>
+		<dict>
+			<key>xpos</key>
+			<integer>730</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
 		<key>48C61BCD-C23C-4612-A3E7-AD4CACF263B3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>460</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>50</integer>
+			<integer>40</integer>
+		</dict>
+		<key>49189072-F463-4156-9A82-084476059619</key>
+		<dict>
+			<key>xpos</key>
+			<integer>90</integer>
+			<key>ypos</key>
+			<integer>190</integer>
 		</dict>
 		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
 		<dict>
 			<key>xpos</key>
-			<integer>70</integer>
+			<integer>90</integer>
 			<key>ypos</key>
 			<integer>40</integer>
+		</dict>
+		<key>B21AB729-5B03-4BEC-B5F4-667BCF23B6FA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>420</integer>
+			<key>ypos</key>
+			<integer>200</integer>
 		</dict>
 	</dict>
 	<key>version</key>

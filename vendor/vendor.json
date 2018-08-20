@@ -1,6 +1,31 @@
 {
 	"comment": "",
 	"ignore": "test",
-	"package": [],
+	"package": [
+		{
+			"checksumSHA1": "RJU1dW1Bxgxe1OSE8sIGx4w2FKQ=",
+			"path": "github.com/fate-lovely/gofred",
+			"revision": "cb03f6f5bfba0513cc48ac355729c99aff4d5984",
+			"revisionTime": "2018-07-26T10:02:41Z"
+		},
+		{
+			"checksumSHA1": "17pyIRa4+1+bbKXX92qPB7znaPI=",
+			"path": "github.com/maruel/rs",
+			"revision": "2c81c4312fe4ee48bed510bdc37ddd499d2d9e9a",
+			"revisionTime": "2015-09-22T17:15:28Z"
+		},
+		{
+			"checksumSHA1": "gldBfAlGmAlcERJkebFJZcDgxp0=",
+			"path": "github.com/maruel/rs/internal/gf256",
+			"revision": "2c81c4312fe4ee48bed510bdc37ddd499d2d9e9a",
+			"revisionTime": "2015-09-22T17:15:28Z"
+		},
+		{
+			"checksumSHA1": "bN/bWewVy6tFrlZKgPrlqYS+S8w=",
+			"path": "github.com/tuotoo/qrcode",
+			"revision": "6cbfb834f9f328f3d3c2e44a50cdcaa330466e4c",
+			"revisionTime": "2017-08-05T14:31:11Z"
+		}
+	],
 	"rootPath": "github.com/fate-lovely/alfred-qrcode-workflow"
 }

@@ -8,6 +8,7 @@ import (
 
 	"github.com/fate-lovely/gofred"
 	qrcode "github.com/skip2/go-qrcode"
+	qrcode2 "github.com/tuotoo/qrcode"
 )
 
 func main() {
@@ -55,7 +56,37 @@ func generateQRCode(content string) {
 }
 
 func scanQRCode(filePath string) {
+	file, err := os.Open(filePath)
+	if err != nil {
+		panic(err)
+	}
 
+	defer file.Close()
+	qrmatrix, err := qrcode2.Decode(file)
+
+	var content string
+
+	if err != nil {
+		content = "Invlaid QR Code"
+	} else {
+		content = qrmatrix.Content
+	}
+
+	gofred.AddItem(&gofred.Item{
+		Title:    content,
+		Subtitle: "press Enter to copy",
+		Valid:    true,
+		Arg:      content,
+		Text: &gofred.Text{
+			Largetype: content,
+		},
+		Icon: &gofred.Icon{
+			Path: " ",
+		},
+	})
+
+	response, _ := gofred.JSON()
+	fmt.Print(response)
 }
 
 func handleError(msg string) {
