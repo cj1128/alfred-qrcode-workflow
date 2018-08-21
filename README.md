@@ -4,7 +4,9 @@
 
 An Alfred workflow to create QR Codes or scan them.
 
-![](./intro.gif)
+<p align="center">
+    <img src="./intro.gif" width="600px" />
+</p>
 
 ## Installation
 
