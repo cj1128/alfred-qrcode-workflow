@@ -4,7 +4,7 @@
 
 An Alfred workflow to create QR Codes or scan them.
 
-![](http://ww1.sinaimg.cn/large/9b85365dgy1fuh7ylxvs3g20hs0c5b2d)
+![](./intro.gif)
 
 ## Installation
 
