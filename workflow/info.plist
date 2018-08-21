@@ -51,7 +51,7 @@
 	<key>createdby</key>
 	<string>CJ Ting&lt;fatelovely1128@gmail.com&gt;</string>
 	<key>description</key>
-	<string>Generate QR Code on the fly</string>
+	<string>Generate/Scan QR Code on the fly</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -203,7 +203,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Generate QR Code on the fly</string>
+	<string>Generate/Scan QR Code on the fly</string>
 	<key>uidata</key>
 	<dict>
 		<key>281EF737-A9A4-4FF6-991A-03E14984BF54</key>
@@ -243,8 +243,8 @@
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>1.1.0</string>
+	<string>1.0.0</string>
 	<key>webaddress</key>
-	<string>cjitng.me</string>
+	<string>https://github.com/fate-lovely/alfred-qrcode-workflow</string>
 </dict>
 </plist>
