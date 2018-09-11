@@ -1,14 +1,15 @@
 package main
 
 import (
+	"bytes"
 	"crypto/md5"
 	"encoding/hex"
 	"fmt"
 	"os"
+	"os/exec"
 
 	"github.com/fate-lovely/gofred"
 	qrcode "github.com/skip2/go-qrcode"
-	qrcode2 "github.com/tuotoo/qrcode"
 )
 
 func main() {
@@ -56,20 +57,18 @@ func generateQRCode(content string) {
 }
 
 func scanQRCode(filePath string) {
-	file, err := os.Open(filePath)
+	cmd := exec.Command("./zbar", filePath)
+	stdout := &bytes.Buffer{}
+	cmd.Stdout = stdout
+	err := cmd.Run()
+
 	if err != nil {
 		panic(err)
 	}
 
-	defer file.Close()
-	qrmatrix, err := qrcode2.Decode(file)
-
-	var content string
-
-	if err != nil {
-		content = "Invlaid QR Code"
-	} else {
-		content = qrmatrix.Content
+	content := stdout.String()
+	if content == "" {
+		panic("解码失败")
 	}
 
 	gofred.AddItem(&gofred.Item{

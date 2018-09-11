@@ -23,6 +23,8 @@ Type `qr [text]` to generate QR code, this has a 800ms delay.
 
 ### Scan QR Code
 
+Use [zbar-with-gbk] to do the parsing.
+
 Select the target QR Code image, press `Cmd + Alt + \`，select `Scan QR Code` in the popup file actions.
 
 Once you get the result, you can
@@ -33,3 +35,5 @@ Once you get the result, you can
 ## License
 
 Released under the [MIT license](http://mit-license.org/2016).
+
+[zbar-with-gbk]: https://github.com/fate-lovely/zbar-with-gbk
