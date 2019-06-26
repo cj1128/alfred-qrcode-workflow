@@ -2,11 +2,12 @@ package main
 
 import (
 	"bytes"
-	"crypto/md5"
-	"encoding/hex"
+	"encoding/base64"
+	"strings"
 	"fmt"
 	"os"
 	"os/exec"
+	"io/ioutil"
 
 	"github.com/fate-lovely/gofred"
 	qrcode "github.com/skip2/go-qrcode"
@@ -15,24 +16,24 @@ import (
 func main() {
 	action := os.Args[1]
 
-	defer func() {
-		if err := recover(); err != nil {
-			handleError(fmt.Sprint(err))
-		}
-	}()
-
+	// defer func() {
+	// 	if err := recover(); err != nil {
+	// 		handleError(fmt.Sprint(err))
+	// 	}
+	// }()
 	switch action {
-	case "generate":
-		generateQRCode(os.Args[2])
-
-	case "scan":
-		scanQRCode(os.Args[2])
+		case "generate":
+			generateQRCode(os.Args[2])
+		case "scan":
+			scanQRCode(os.Args[2])
+		case "list":
+			showHistoryList()
 	}
 }
 
 func generateQRCode(content string) {
-	md5Hash := md5.Sum([]byte(content))
-	path := fmt.Sprintf("/tmp/alfred_qrcode_%s.png", hex.EncodeToString(md5Hash[:]))
+	filename := base64.StdEncoding.EncodeToString([]byte(content))
+	path := fmt.Sprintf("/tmp/alfred_qrcode_%s.png", filename)
 
 	if !fileExists(path) {
 		err := qrcode.WriteFile(content, qrcode.Medium, 256, path)
@@ -54,6 +55,45 @@ func generateQRCode(content string) {
 
 	response, _ := gofred.JSON()
 	fmt.Print(response)
+}
+
+func showHistoryList() {
+	files :=	getTmpFileList()
+	prefix := "alfred_qrcode_"
+	for _, f := range files {
+		if strings.Contains(f.Name(), prefix) {
+			name := strings.TrimRight(f.Name(), ".png")
+			lastIndex := strings.Index(name, prefix) + len(prefix)
+			title, err := base64.StdEncoding.DecodeString(name[lastIndex:])
+			filepath := "/tmp/" + f.Name()
+
+			if err != nil {
+				panic(err)
+			}
+			gofred.AddItem(&gofred.Item{
+				Title: string(title),
+				Type:  "file",
+				Arg:   filepath,
+				Valid: true,
+				Icon: &gofred.Icon{
+					Type: "file",
+					Path: filepath,
+				},
+			})
+		
+		}
+	}
+
+	response, _ := gofred.JSON()
+	fmt.Print(response)
+}
+
+func getTmpFileList() []os.FileInfo {
+	files, err := ioutil.ReadDir("/tmp")
+	if err != nil {
+		panic(err)
+	}
+	return files
 }
 
 func scanQRCode(filePath string) {
