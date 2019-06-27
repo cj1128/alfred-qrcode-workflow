@@ -16,11 +16,11 @@ import (
 func main() {
 	action := os.Args[1]
 
-	// defer func() {
-	// 	if err := recover(); err != nil {
-	// 		handleError(fmt.Sprint(err))
-	// 	}
-	// }()
+	defer func() {
+		if err := recover(); err != nil {
+			handleError(fmt.Sprint(err))
+		}
+	}()
 	switch action {
 		case "generate":
 			generateQRCode(os.Args[2])
