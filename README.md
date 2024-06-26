@@ -32,6 +32,13 @@ Once you get the result, you can
 - Press `Cmd + L` to preview in large text
 - Press `Enter` to copy to the clipboard
 
+## Changelog
+
+### 1.2.0 2024.06.26
+
+- Add workflow configuration set directory for saving qr codes
+- Use go modules instead of vendor dir
+
 ## License
 
 Released under the [MIT license](http://mit-license.org/2016).

@@ -49,7 +49,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>CJ Ting&lt;fatelovely1128@gmail.com&gt;</string>
+	<string>CJ Ting&lt;cjting1128@gmail.com&gt;</string>
 	<key>description</key>
 	<string>Generate/Scan QR Code on the fly</string>
 	<key>disabled</key>
@@ -80,6 +80,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -118,13 +120,13 @@
 			<key>uid</key>
 			<string>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>acceptsmulti</key>
-				<false/>
+				<integer>0</integer>
 				<key>filetypes</key>
 				<array>
 					<string>+public.image</string>
@@ -146,6 +148,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -182,7 +186,7 @@
 			<key>uid</key>
 			<string>B21AB729-5B03-4BEC-B5F4-667BCF23B6FA</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -191,6 +195,8 @@
 				<false/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
 				<key>transient</key>
 				<false/>
 			</dict>
@@ -199,7 +205,7 @@
 			<key>uid</key>
 			<string>281EF737-A9A4-4FF6-991A-03E14984BF54</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -209,42 +215,68 @@
 		<key>281EF737-A9A4-4FF6-991A-03E14984BF54</key>
 		<dict>
 			<key>xpos</key>
-			<integer>730</integer>
+			<real>730</real>
 			<key>ypos</key>
-			<integer>200</integer>
+			<real>200</real>
 		</dict>
 		<key>48C61BCD-C23C-4612-A3E7-AD4CACF263B3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>410</integer>
+			<real>410</real>
 			<key>ypos</key>
-			<integer>40</integer>
+			<real>40</real>
 		</dict>
 		<key>49189072-F463-4156-9A82-084476059619</key>
 		<dict>
 			<key>xpos</key>
-			<integer>90</integer>
+			<real>90</real>
 			<key>ypos</key>
-			<integer>190</integer>
+			<real>190</real>
 		</dict>
 		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
 		<dict>
 			<key>xpos</key>
-			<integer>90</integer>
+			<real>90</real>
 			<key>ypos</key>
-			<integer>40</integer>
+			<real>40</real>
 		</dict>
 		<key>B21AB729-5B03-4BEC-B5F4-667BCF23B6FA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>200</integer>
+			<real>200</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>/tmp</string>
+				<key>filtermode</key>
+				<integer>1</integer>
+				<key>placeholder</key>
+				<string>Folder to save QR codes</string>
+				<key>required</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Folder to save QR codes</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>qrDir</string>
+		</dict>
+	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>1.1.0</string>
+	<string>1.2.0</string>
 	<key>webaddress</key>
-	<string>https://github.com/fate-lovely/alfred-qrcode-workflow</string>
+	<string>https://github.com/cj1128/alfred-qrcode-workflow</string>
 </dict>
 </plist>

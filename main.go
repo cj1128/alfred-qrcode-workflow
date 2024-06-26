@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"path"
 
 	"github.com/fate-lovely/gofred"
 	qrcode "github.com/skip2/go-qrcode"
@@ -31,11 +32,12 @@ func main() {
 }
 
 func generateQRCode(content string) {
+	dir := os.Getenv(("qrDir"))
 	md5Hash := md5.Sum([]byte(content))
-	path := fmt.Sprintf("/tmp/alfred_qrcode_%s.png", hex.EncodeToString(md5Hash[:]))
+	p := path.Join(dir, fmt.Sprintf("alfred_qrcode_%s.png", hex.EncodeToString(md5Hash[:])))
 
-	if !fileExists(path) {
-		err := qrcode.WriteFile(content, qrcode.Medium, 256, path)
+	if !fileExists(p) {
+		err := qrcode.WriteFile(content, qrcode.Medium, 256, p)
 		if err != nil {
 			panic(err)
 		}
@@ -44,11 +46,11 @@ func generateQRCode(content string) {
 	gofred.AddItem(&gofred.Item{
 		Title: content,
 		Type:  "file",
-		Arg:   path,
+		Arg:   p,
 		Valid: true,
 		Icon: &gofred.Icon{
 			Type: "file",
-			Path: path,
+			Path: p,
 		},
 	})
 
